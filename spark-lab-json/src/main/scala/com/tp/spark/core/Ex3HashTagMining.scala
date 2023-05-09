@@ -46,9 +46,12 @@ object Ex3HashTagMining {
   def hashtagMentionedOnTweet(): RDD[String] = {
     
     val data = loadData()
-    val hashtagMentionedOnTweets = data.map(tweet => tweet.text)
+    val regex = """#(\w|[\p{L}\p{Mn}])+""".r
+    val hashtagMentionedOnTweets = data.map(tweet => tweet.text).map(text => text.split(" ").filter(_.startsWith("#")) ).flatMap(list => list).filter(_.length >1 )
+    
     hashtagMentionedOnTweets 
     }
+
 
 
   /**

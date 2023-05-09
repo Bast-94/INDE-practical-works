@@ -9,3 +9,4 @@ project/
 target
 .vscode/
 .metals/
+spark-lab-json/.bloop/
