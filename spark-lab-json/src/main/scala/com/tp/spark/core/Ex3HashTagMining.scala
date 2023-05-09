@@ -52,8 +52,6 @@ object Ex3HashTagMining {
     hashtagMentionedOnTweets 
     }
 
-
-
   /**
    *  Count how many times each hashtag is mentioned
    */
@@ -61,7 +59,6 @@ object Ex3HashTagMining {
     val hashtagMentionedOnTweets  = hashtagMentionedOnTweet()
     hashtagMentionedOnTweets.map(word => (word, 1)).reduceByKey(_ + _)
   }
-
   /**
    *  Find the 10 most popular Hashtags by descending order
    */
