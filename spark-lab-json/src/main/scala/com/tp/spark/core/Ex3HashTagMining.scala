@@ -66,7 +66,7 @@ object Ex3HashTagMining {
    *  Find the 10 most popular Hashtags by descending order
    */
   def top10HashTags(): Array[(String, Int)] = {
-    ???
+    countMentions().sortBy(_._2, ascending = false).take(10)
   }
 
 }
