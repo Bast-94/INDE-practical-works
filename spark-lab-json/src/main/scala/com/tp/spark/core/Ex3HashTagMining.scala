@@ -44,7 +44,10 @@ object Ex3HashTagMining {
    *  Find all the hashtags mentioned on tweets (duplicates are allowed)
    */
   def hashtagMentionedOnTweet(): RDD[String] = {
-    ???
+    
+    val data = loadData()
+    val hashtagMentionedOnTweets = data.map(tweet => tweet.text)
+    hashtagMentionedOnTweets 
     }
 
 
