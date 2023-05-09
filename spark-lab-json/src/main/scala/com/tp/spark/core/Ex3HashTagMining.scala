@@ -58,7 +58,7 @@ object Ex3HashTagMining {
    *  Count how many times each hashtag is mentioned
    */
   def countMentions(): RDD[(String, Int)] = {
-    hashtagMentionedOnTweets  = hashtagMentionedOnTweet()
+    val hashtagMentionedOnTweets  = hashtagMentionedOnTweet()
     hashtagMentionedOnTweets.map(word => (word, 1)).reduceByKey(_ + _)
   }
 
