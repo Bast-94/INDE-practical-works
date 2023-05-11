@@ -5,7 +5,6 @@
 hs_err_pid*
 .vscode.bsp/
 .bsp
-project/
 target
 .vscode/
 .metals/
